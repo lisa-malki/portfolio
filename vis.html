@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=    <meta name=" description " content=" ">
+    <meta name="author " content="Mark Otto, Jacob Thornton, and Bootstrap contributors ">
+    <meta name="generator " content="Hugo 0.101.0 ">
+    <title>Visualisation</title>
+
+    <link rel="canonical " href="https://getbootstrap.com/docs/5.2/examples/album/ ">
+
+    <link rel="preconnect " href="https://fonts.googleapis.com ">
+    <link rel="preconnect " href="https://fonts.gstatic.com " crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap " rel="stylesheet "> 
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;600&display=swap " rel="stylesheet ">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap " rel="stylesheet "> 
+
+    
+
+<link href="assets/dist/css/bootstrap.min.css " rel="stylesheet ">
+
+    <style>
+    .jumbotron {
+        background-image: url("images/paint me/cover.jpg ");
+        background-size: cover;
+    }
+
+    .card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+    } 
+    
+    .link-card:hover{
+        opacity:0.7
+    }
+    h1, h2, h3, h4{
+      font-family: 'Alegreya';
+    }
+    h1{
+        font-weight: 600;
+    }
+    p, li, a{
+      font-family: 'Montserrat';
+    }
+    ul li { padding: 5px 0px; }
+    ol li { padding: 5px 0px; }
+    </style>
+
+
+    
+  </head>
+  <body>
+    
+<header>
+    <nav class="navbar navbar-dark navbar-expand-lg bg-dark ">
+        <div class="container ">
+
+          <div>
+            <ul class="navbar-nav justify-content-end ">
+              <li class="nav-item px-2 ">
+                <a class="nav-link active " aria-current="page " href="index.html ">Home</a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </nav>
+</header>
+
+<main>
+    
+  <section>
+    <div class="jumbotron jumbotron-fluid py-5 ">
+        <div class="container my-3 ">
+          <h1 style=' color:white; font-size: 4em;'>User Centered Data Visualisation</h1>
+          <p class="lead " style='color:white'>A selection of design concepts integrating visualisations into everyday interfaces with a focus on usability. Explores principles of human vision and their connection to effective visualisation design. </p>
+        </div>
+
+
+    </div>
+    <div class='container my-5'>
+      <h1 class= 'my-4' >Project Overview</h1>
+      <p>
+        Invisible bytes of data shape the news we see online, the people we speak to, and the decisions made about us by the powers-that-be. Data is often too big for us to meaningfully comprehend, so must be abstracted: visualisation refers to the practice of encoding and abstracting information using graphical elements.  
+      </p>
+      <p>
+        What we take from a visualisation is the culmination of several design decisions as the same data can be visually encoded in a myriad of different ways. A user-centred approach to visualisation takes into account the context of the end-user, the domain tasks they wish to achieve with a visualisation,
+        and most importantly, their cognitive and perceptive capacities. The best encoding therefore, is that which is the most appropriate for the task at hand, and the user interpreting it.
+      </p>
+      <p>
+        This project explores some examples of user-centered data visualisation, presenting a fusion of well-known and newer vis idioms in everyday contexts. I use the language of domain tasks and targets to describe the aims of users, and describe the underlying visual principles guiding my choices of encoding.
+      </p>
+      
+      <h1 class= 'mt-4'>Smart Thermostat</h1>
+      <p class='lead'>
+        This mini-project details the process of designing visualisations to be integraded into a domestic smart thermostat.
+      </p>
+      <h2 class='my-4'>
+          Domain Tasks
+      </h2>
+      <p>
+          Design decisions were made in relation to the following three domain tasks:
+          <ol>
+              <li>
+                Checking that the smart thermostat is functioning correctly and efficiently: on a basic level, this involves an elementary
+                lookup and comparison, where the target is an outlier, i.e. an instance where the temperature was not recorded or controlled as desired.
+              </li>
+              <li>
+                Judging how the pattern of heating over time relates to activities in the home: This is a synoptic task , where
+                the target may be any of: trends, outliers, or features.
+              </li>
+              <li>
+                Checking that the temperature is within a safe range: For this task, the temperature is judged to be either
+                under or over a known baseline, which can be set by the user. Targets include features and extremes/outliers.
+              </li>
+          </ol> 
+      </p>
+      <p>
+        This projects uses two data streams for internal and external home temperature. The internal temperature data is a
+        timestamped series of readings in degrees Celsius (samples taken every 10 minutes), with an additional categorical stream for boiler status (ON or OFF). The external
+        temperature dataset has a similar structure and was scraped from WeatherUnderground (link <a href='https://www.wunderground.com/history/daily/gb/london/EGLC/date/2017-3-10'>here</a>).
+    </p>
+      <h2 class='my-4'>
+        Data Exploration
+        </h2>
+
+    <p>
+        The tried and tested line chart idiom was chosen to initially visualise the temporal data. Line charts augment dot charts with connecting line marks, creating a very strong implication of trend relationships and
+        continuous flow across points. Line graphs also use less screen real estate than bar charts - an important consideration given the high granularity of the data.
+    </p>
+
+
+
+    <h2 class='my-4'>
+        Encoding Categorical Attributes
+    </h2>
+    <p>
+        In addition to showing internal/external temperature, it is
+        also desirable to indicate when the boiler is on and when
+        the internal temperature falls below a defined limit. A full
+        colour overlay was chosen to encode the boiler status.
+        Colour is a relatively effective identity channel, and
+        spatial overlay supports rapid comparison.
+    </p>
+    <p>
+        Colour hue is additionally used as a visual popout to
+        identify line segments which fall below an example
+        baseline of 20 degrees. Due to parallel processing and
+        the effectiveness of the colour channel in this context, the
+        popout can be perceived even in the presence of other
+        visual distractors.
+    </p>
+    <div class='row'>
+        <div class='col-6'>
+            <figure class="figure ">
+                <img class ='img-fluid' style='width:100%; ' src="images/vis/1.png " alt="... ">
+                <figcaption class="figure-caption ">Initial exploration of the two streams of temperature data over a period of 3 months using Python's Plotly library</figcaption>
+            </figure>
+        </div>
+        <div class='col-6'>
+            <figure class="figure ">
+                <img style='width:100%; ' src="images/vis/thermostat_ev.PNG " alt="... ">
+                <figcaption class="figure-caption ">First iteration of the interface, created using Matplotlib and Adobe Illustrator for aesthetic refinements</figcaption>
+            </figure>
+        </div>
+
+    </div>
+    <h2 class='my-4'>
+        Interactivity and Context of Use
+    </h2>
+    <p>
+        Interactive features improve the user experience of visualisations at little cost
+        to accuracy or efficiency, and tooltips in particular improve user confidence
+        when navigating time series charts.
+    </p>
+    <p>
+        Zoom plots embed the time series within a zoomable widget allowing
+        users to customise the timeframe they wish to see. Zooming was
+        implemented using the Plotly Express library, which allows smooth, flexible
+        navigation using a range slider as well as custom zooming on the main
+        plot. Button filters to limit the view to common timeframes (1 month, 3
+        months, 6 months) are also provided.
+    </p>
+    <p>
+        Checkbox filters allow the user to select the graph amenities they wish to be visible. This
+        enables them to view only the information that directly supports their task, eliminating
+        distractors, and supporting the process of filtering.
+    </p>
+    <figure class="figure my-4 text-center ">
+        <img style='width:60%; ' src="images/vis/interface.png " alt="... ">
+        <div class = 'd-flex justify-content-center'>
+            <figcaption style='width:60%;' class="figure-caption ">Final mock-up of the interface. Visualisations were produced with Python, before being imported
+                into Illustrator for aesthetic adjustments. Adobe XD was used to prototype the interface context and UI
+                elements.
+            </figcaption>
+        </div>
+
+    </figure>
+
+    <h1 class= 'mt-5' >Screen Time Visualiser</h1>
+    <p class='lead'>
+        Being aware of how long we use our phones and for what purpose is becoming more popular, and many devices already have built-in visualisation displays for screen time, including total
+        time spent, and breakdowns by app. This project will investigate how this data can be most effectively presented, given the constraints of a mobile interface.
+    </p>
+    <h2 class='my-4'>
+        Domain Tasks
+    </h2>
+    <p>
+        Design decisions were made in relation to the following three domain tasks:
+        <ol>
+            <li>
+                Identifying the apps, or groups of apps, that take up the most screen time: this is a discovery task, the
+                target of which is the distribution of screen time. Outliers and extremes are of particular interest.
+            </li>
+            <li>
+                Checking how screen time (overall, or for specific apps) changes over time: this involves discovering
+                temporal trends in the data at different levels of abstraction.
+            </li>
+        </ol> 
+    </p>
+    <p>
+        I manually extracted my own app usage data for the period 8th-16th March 2022 from the iOS screen time app.
+        The dataset is a 2D table, with entries representing screen time in minutes indexed by date and app name. Each
+        app is categorized into social, entertainment, information, or other.
+    </p>
+    <h2 class='my-4'>
+        Data Exploration: Visualising Temporal Trends
+    </h2>
+
+    <p>
+        Bar charts facilitate accurate value extraction and efficient
+        comparisons between adjacent (or close-together) bars. This is
+        important, as domain task 2 focuses more on short-term, day-by-day
+        trend comparisons rather than high-level changes over long
+        periods of time. A stacked bar chart is used to show total screen
+        time for each day of the week, disaggregated by app
+        category.
+    </p>
+    
+    
+
+    <h2 class='my-4'>
+        App-Wise Disaggregation
+    </h2>
+    <p>
+        Core to the design is the task of checking screen time for individual apps, which are lower down on the hierarchy than app categories. 
+         I initially designed a multiform interface
+        which facets the stacked bar overview with a donut chart, expanding the range of
+        tasks the user can complete peripherally. Each category is shown separately on
+        a tabbed menu screen to reduce visual clutter. Donut charts effectively visualise hierarchical data with the arc length channel
+        rather than the less perceptually salient angle.
+    </p>
+    <p>
+        A downside of this approach is that users must switch
+        between screens to view different categories, weakening the sense of implicit
+        hierarchy in the data, and increasing cognitive load. Treemaps use subdivided,
+        bounded areas to effectively convey hierarchical structures on displays of limited
+        size without losing attention to detail.
+    </p>
+    <div class='row'>
+        <div class='col-6 text-center'>
+            <figure class="figure my-4 ">
+                <img  style='width:90%' src="images/vis/pies.svg " alt="... ">
+                <figcaption class="figure-caption my-4 text-center ">First low-fidelity iteration of the UI. The user can easily navigate between categories and view their
+                    screen time for the apps within the chosen category using the donut chart.
+                </figcaption>
+            </figure>
+        </div>
+        <div class='col-6 text-center'>
+            <figure class="figure my-4 text-center ">
+                <img  style='width:100%' src="images/vis/treemap.PNG " alt="... ">
+                <figcaption class="figure-caption my-4 text-center ">App time treemap developed to allow all categories to be present on a single UI
+                    screen.
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+
+    <h2 class='mb-4'>
+        Interactivity and Context of Use
+    </h2>
+    <p>
+        The final design combines the existing pattern of a labelled bar chart with a treemap, to disaggregate by category and app. When the user taps the bar
+        corresponding to a particular day, an app-wise breakdown for that day appears. This facets a weekly overview with a treemap to keep weekly trends in the user's peripheral vision. The display includes descriptive text to support users who need screen-readers
+        to interpret the visualisation
+    </p>
+    <figure class="figure my-4 text-center ">
+        <img style='width:75%' src="images/vis/prototypephones.PNG " alt="... ">
+        <figcaption class="figure-caption my-4 text-center ">Wireframe mock-up of the final interface
+        </figcaption>
+    </figure>
+
+    <h1>Interactive Exhibit</h1>
+    <p class='lead'>
+        Datasets have become scientific artefacts, creating a place for museums exhibits which visualise data for a diverse audience. Here, I have designed an interactive museum
+exhibition visualizing London’s atmospheric emissions and its relationship with borough demographics, allowing users to collaboratively explore data with a personal dimension.
+    </p>
+    <h2 class='my-4'>
+        Domain Tasks
+    </h3>
+    <ol>
+        <li>
+            Detecting global or local patterns in emissions across London, such as
+            significant north-south or east-west differences in emissions.
+        </li>
+        <li>
+            Identifying singular values for a chosen geographic location- e.g., viewing the rate of car
+            ownership for one’s own borough.
+        </li>
+        <li>
+            Searching for known patterns such as clusters and correlations between different
+            demographical and environmental measures
+        </li>
+
+    </ol>
+    <p>
+        The data for this project includes a <a href='http://skgrange.github.io/data.html'>GeoJSON file</a> defining borough boundaries, and four additional streams of
+        data for borough atmospheric emissions, population density car ownership, and percentage of green space taken
+        from the <a href='https://data.london.gov.uk/dataset/london-borough-profiles'>GLA borough profiles</a>.
+    </p>
+    <h2 class='my-4'>
+        Visualising Geographies
+    </h2>
+    <h4 class='my-4'>
+        Choropleth Map
+    </h4>
+    <p>
+        Choropleth maps directly convey shape information by spatial elements, and use
+        colour to encode associated ordinal, quantitative or categorical attributes. There is an
+        intuitive concordance between the frequent aggregation of data at regional levels and the
+        use of geometric regions to encode this data. Choropleths also
+        exploit human colour perception through for instance, the dark-is-more bias. This means that even
+        without a legend, high values are implicitly associated with dark colours.
+    </p>
+
+    <h4 class='my-4'>
+        Colourmaps
+    </h4>
+    <p>
+        The choice of colourmap rests on the structure and form of the data.
+        Atmospheric emissions is quantitative, ranging from a (theoretical) minimum of
+        zero, to some maximum. Consequently, making a multi-hue colourmap is
+        inappropriate, as hue, an identity channel, does not carry an inherent message
+        of magnitude.
+    </p>
+    <p>
+        To better convey perceptual linearity, the luminance channel is used to show
+        progression from a minimum to a maximum with a single-hue, monotonically
+        increasing map. Five colour classes were used to provide sufficient granularity
+        to explore trends without harming the
+        map’s legibility, given the range of the
+        emissions data. The <a href='https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3'>ColorBrewer</a> tool was used to experiment with
+        different colourmaps, and select one that was suitable for colour blind users.
+    </p>
+
+    <div class = ' text-center'>
+        <figure class="figure mt-4 ">
+        <img style='width:75%' src="images/vis/choropleth.PNG " alt="... ">
+        <figcaption  class="figure-caption my-4 text-center ">Choropleth map
+            with borough names, to
+            help users find the
+            information most relevant
+            to them. Developed with
+            Python + Illustrator. 
+        </figcaption>
+    </figure>
+    </div>
+    <h2 class='my-4'>
+        Visualising Relationships
+    </h2>
+    <h4 class='my-4'>
+        The Humble SPLOM
+    </h4>
+    <p>
+        Scatterplots are particularly effective for visualising correlations between
+        two variables, using perceptual judgements of how well points fall along a
+        diagonal line. The rectilinear layout is familiar to users- an important
+        factor, since museum exhibits are viewed by people of all skill levels.
+    </p>
+    <p>
+        Scatterplot matrices (SPLOMs) are a good way to lay out multi-dimensional data, and outperform idioms such as parallel plots in correlation identification tasks. They are also more intuitive to novice users, and avoid the clutter
+        caused by overlapping line segments.
+    </p>
+    <p>
+        As such, relationships between various socio-demographic measures for boroughs in London was visualised using a SPLOM. The Seaborn library was used to
+        implement a SPLOM with point grouping (enclosing
+        points into geographical shapes) to make clusters,
+        correlations, and outliers more visually salient.
+    </p>
+    
+    <div class = ' text-center'>
+        <figure class="figure mt-4 ">
+        <img style='width:75%' src="images/vis/splom.PNG " alt="... ">
+        <figcaption  class="figure-caption my-4 text-center ">
+            SPLOM plot. The user can look up plots using both the axis labels and diagonals.
+        </figcaption>
+    </figure>
+    </div>
+    <h2 class='my-4'>
+        Interactivity and Context of Use
+    </h2>
+    <h4 class='my-4'>
+        Large Scale Display
+    </h4>
+    <p>
+        Large-scale displays reap the benefits of a wide field of view, which exploits
+        peripheral vision to make sense of context while maintaining acuity of the focal
+        area. They also encourage physical, embodied interaction such as walking and
+        head turning, which improves user experience. A larger display which invites
+        shared exploration of data is particularly important in museums, where people
+        collectively make sense of exhibits.
+    </p>
+
+    <div class = ' text-center'>
+        <figure class="figure mt-4 ">
+        <img style='width:75%' src="images/vis/museum.PNG " alt="... ">
+        <figcaption  class="figure-caption my-4 text-center ">
+            Context mockup of the interface.
+        </figcaption>
+    </figure>
+    </div>
+
+    <h4 class='mb-4'>
+        Scatterplot Brushing and Linking
+    </h4>
+    <p>
+        The technique of brushing and linking is implemented on the display, to connect
+        data shown on the map to its corresponding SPLOM representation. When the
+        user taps a borough, it is highlighted, and points corresponding to this borough in
+        the SPLOM are all enlarged and highlighted, so the user can see the matrix-wide
+        behaviour of their borough.
+    </p>
+
+    
+    <div class = ' text-center'>
+        <figure class="figure mt-4 ">
+        <img style='width:60%' src="images/vis/linking.PNG " alt="... ">
+        <figcaption  class="figure-caption my-4 text-center ">
+            View when the user taps on a specific borough.
+        </figcaption>
+    </figure>
+    </div>
+
+
+
+
+
+    </div>
+
+
+
+
+</div>
+
+
+    
+
+
+
+  </section>
+  
+
+
+</main>
+
+<!-- <footer class="text-muted py-5 ">
+  <div class="container ">
+    <p class="float-end mb-1 ">
+      <a href="# ">Back to top</a>
+    </p>
+    <p class="mb-1 ">Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
+    <p class="mb-0 ">New to Bootstrap? <a href="/ ">Visit the homepage</a> or read our <a href="../getting-started/introduction/ ">getting started guide</a>.</p>
+  </div>
+</footer> -->
+
+
+<script src="../assets/dist/js/bootstrap.bundle.min.js "></script>
+
+
+  </body>
+</html>

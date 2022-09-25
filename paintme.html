@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=    <meta name=" description " content=" ">
+    <meta name="author " content="Mark Otto, Jacob Thornton, and Bootstrap contributors ">
+    <meta name="generator " content="Hugo 0.101.0 ">
+    <title>Paint Me</title>
+
+    <link rel="canonical " href="https://getbootstrap.com/docs/5.2/examples/album/ ">
+
+    <link rel="preconnect " href="https://fonts.googleapis.com ">
+    <link rel="preconnect " href="https://fonts.gstatic.com " crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap " rel="stylesheet "> 
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;600&display=swap " rel="stylesheet ">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap " rel="stylesheet "> 
+
+    
+
+<link href="assets/dist/css/bootstrap.min.css " rel="stylesheet ">
+
+
+    <style>
+    .jumbotron {
+        background-image: url("images/paint me/cover.jpg ");
+        background-size: cover;
+    }
+
+    .card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+    } 
+    
+    .link-card:hover{
+        opacity:0.7
+    }
+
+    ul li { padding: 5px 0px; }
+    ol li { padding: 5px 0px; }
+    h1{
+      font-weight: 600;
+    }
+
+    h1, h2, h3, h4{
+      font-family: 'Alegreya';
+    }
+    p, li, a{
+      font-family: 'Montserrat';
+    }
+
+    </style>
+
+
+    
+  </head>
+  <body>
+    
+<header>
+    <nav class="navbar navbar-dark navbar-expand-lg bg-dark ">
+        <div class="container ">
+
+          <div>
+            <ul class="navbar-nav justify-content-end ">
+              <li class="nav-item px-2 ">
+                <a class="nav-link active " aria-current="page " href="index.html ">Home</a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </nav>
+</header>
+
+<main>
+    
+  <section>
+    <div class="jumbotron jumbotron-fluid py-5 ">
+        <div class="container my-3 ">
+          <h1 style='color:white; font-size: 4em;'>Paint Me</h1>
+          <p class="lead " style='color:white'>An AR intervention designed to foster valuable experiences between
+            co-located museum visitors. Submitted as an entry to the 2021 SNAP Creative Challenge.</p>
+        </div>
+    </div>
+    <div class='container my-5'>
+      <h1 class='my-4'>Project Overview</h1>
+      <p>
+        Museums are places of learning, joy, surprise, and perhaps most importantly, connection with others.
+        Despite socialisation being a key motivation behind visiting the museum for many people, the social potential of museums has not been fully unlocked, in part due
+        to the one-way information transfer model which pervades the design of exhibits. 
+      </p>
+
+      <p>
+        Theorising that AR could disrupt this transmission-absorption model through allowing visitors to virtually transform the exhibition space, I led a team of six HCI students
+        in developing ‘Paint Me’: a statue-painting intervention designed to promote interactive experiences between museum goers, while deconstructing
+        historical misconceptions about the use of colour in statues from antiquity.
+      </p>
+      <p>
+        This multidisciplinary project combined insights from museum studies, history, HCI, and art to design a proof-of-concept prototype with demonstrable potential for future development.
+      </p>
+      <h2 class='my-4'>Design Questions</h2>
+
+      <p style='font-style:italic' class='lead'>
+        How might we use AR to create an exhibit space that stimulates interest in history, and organically
+        encourages socialisation?
+      </p>
+      <p style='font-style:italic' class='lead'>
+        How might we ensure technology fits seamlessly into the exhibit space and augments, rather than replaces, historical artefacts?
+      </p>
+
+      <p style='font-style:italic' class='lead'>
+        How might we encourage embodied interactions with museum exhibits while respecting the heritage of artefacts, and ensuring their safety?
+      </p>
+    </div>
+    <div class='container my-5'>
+      <h1 class='my-4'>User Research</h1>
+      <h2 class='my-4'>Passive Observations</h2>
+      <p>
+        To gain a high-level understanding of how visitors move through exhibit spaces and interact with one another, we conducted a passive field observation in the British Museum. 
+        Our observation revealed the centrality of closely bonded visitor groups: lone visitors were rare,
+        and high levels of discussion were observed within groups. This introduced the design
+        challenge in bringing strangers together while maintaining and capitalising on the strong internal dynamics of individual visitor groups.
+      </p>
+
+
+      <h3 class='my-4'>Surveys and Interviews</h3>
+      <p>
+        Our target users were conceptualised as the group who were most likely to be reached by the intervention. Through conducting an exploratory online survey, we identified our target audience as 18-25 year olds with a moderate to strong interest in going to the museum, and some willingness to try out AR technologies in an exhibit space.
+      </p>
+      <p>
+        We abstracted our survey findings into descriptive user personas, to act a single point of reference for future design decisions and ensure the process was grounded in the needs of users.
+      </p>
+      <div class="container my-4 ">
+        <div class="row ">
+          <div class="col-sm ">
+            <figure class="figure ">
+              <img style='width:90%' src="images/paint me/persona1.jpg " alt="... ">
+              <figcaption class="figure-caption ">Primary Persona</figcaption>
+            </figure>
+          </div>
+          <div class="col-sm ">
+            <figure class="figure ">
+              <img style='width:90%' src="images/paint me/persona2.jpg " alt="... ">
+              <figcaption class="figure-caption ">Secondary Persona</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+
+      <p>
+        We also conducted in-depth interviews with a sample of participants who had been situated within the primary persona. The interviews explored how participants experienced the museum space, any frustrations they encountered, and their feelings towards the introduction of 
+        AR technologies. We used affinity diagrams to analyse our findings inductively, and formulated a number of high-level themes which would shape our design process. 
+        <h2 class='my-4'> Key Thematic Findings</h2>
+        <ul>
+          <li>
+            While participants did report socialising with their groups, they generally expressed reluctance to extend this interaction to strangers, citing awkwardness, and feeling unknowledgeable
+            about a particular historical period as justifications.
+          </li>
+          <li>
+            Connection with the past was identified as multi-sensory, and driven by rich, relatable narratives about real people. Many
+            participants had previously formed new historical interests through music and games, emphasising the value of
+            immersive experiences with a low knowledge entry level.
+          </li>
+          <li>
+            Participants expressed interest in using AR technologies to engage with exhibits on a deeper level, but were anxious about being overly immersed and bumping into and distracting others.
+          </li>
+        </ul>
+      </p>
+
+      <h1 class='my-4'>Sketching and Ideation</h1>
+      <h2 class='my-4'>Exploration</h2>
+      <p>
+        Feedback from users provided inspiration for design concepts, which were rapidly sketched in an unstructured
+        brainstorming session. We prioritised immersive concepts that promoted collaborative storytelling, and provided opportunities for embodied group interactions. 
+      </p>
+      <figure class="figure my-4 ">
+        <img style='width:100%' src="images/paint me/sketches.jpg " alt="... ">
+        <figcaption class="figure-caption ">Concept sketches for design alternatives</figcaption>
+      </figure>
+
+      <p>
+        The British Museum was selected as a case study due to its proximity to campus and its wide array of
+        popular artefacts such as the Rosetta Stone. We eventually converged on our painting activity as it offered the strongest augmentation within the spatial context of the British Museum.
+      </p>
+      <p>
+        The
+        activity would offer virtual transformation of the real exhibit, and an opportunity to learn about how Roman and Greek
+        painters worked in a hands-on way. The activity was simple and exploratory, offering a stress-relieving and creative
+        outlet while deconstructing the misconceptions around polychromy in Greco-Roman statues
+      </p>
+      <h2 class='my-4'>Conceptually Developing 'Paint Me'</h2>
+      <figure class="figure my-4 ">
+        <img style='width:100%' src="images/paint me/storyboard.jpg " alt="... ">
+        <figcaption class="figure-caption ">An initial storyboard for the core functionality of 'Paint Me'</figcaption>
+      </figure>
+
+      <p>
+        This high-level concept was expanded into an activity in which 2-4 users would use an AR headset to digitally 'paint' a Greco-Roman statue with their hands. A HoloLens 2 headset was selected as the platform, due to its wide field of view, which was thought to facilitate peripheral awareness of other users.
+      </p>
+      <p>
+        We produced a use case diagram to modularise the intervention into the key actions a single user would perform.
+        This was extended into a user-centred journey map, to concretely relate our design to our primary persona.
+      </p>
+      <figure class="figure my-4 ">
+        <img style='width:100%' src="images/paint me/user journey.jpg " alt="... ">
+        <figcaption class="figure-caption ">Initial user journey map for the intervention.</figcaption>
+      </figure>
+
+      <h1 class='my-4' >Tangible Mockups and Formative User Feedback</h1>
+      <p>
+        To explore the physicality of the design, we used scale paper models to experiment with different spatial layouts. Using paper characters, we stepped through all stages of the user journey as a group and were able to
+        identify points of frustration for users.
+      </p>
+      <figure class="figure my-4 text-center ">
+        <img src="images/paint me/scenes.PNG " style='width: 70%' alt="... ">
+        <figcaption class="figure-caption my-3 ">Paper models of the intervention used to explore the spatial layout</figcaption>
+      </figure>
+
+
+      <p>
+        Our scale model prototype fed into the second iteration of our design- a tangible throwaway mockup, for use in
+        evaluations. We selectively prototyped the core use cases with watercolours, coloured rocks, post-it notes and an iPad,
+        and devised research questions to express our evaluation aims:
+        <ol>
+          <li>
+            Does colour sharing encourage social interaction between users who don’t know each other?
+          </li>
+          <li>
+            What motivates participants to continue with (or complete) the painting task?
+          </li>
+          <li>
+            Given inexperience with a painting interface, what learning strategies are adopted by participants? How can
+            we design for these learning strategies?
+          </li>
+          <li>
+            What gestures and actions are appropriate for each of the use-cases designed? E.g. sharing paints and unlocking shared view.
+          </li>
+        </ol>
+      </p>
+
+      <div class='row my-5'>
+        <div class='col-lg-7'>
+          <h2 class='mb-3'>
+            Wizard-of-oz Testing
+          </h2>
+          <p>
+            Our first test aimed to evaluate the social potential of the intervention, and observe the gestural interactions between novice users. 
+          </p>
+          <p>
+            Here, we employed a wizard-of-oz technique. Participants were given two items each that represented the raw
+            materials with which they would make their paints. High-level instructions such as “turn these rocks into paint”
+            were given, allowing us to observe the most intuitive ways of interacting with the system.
+          </p>
+          <p>
+            Our participants instinctively performed a crushing motion, and were rewarded with watercolour paints. They then set to work painting a prototypal statue using watercolour paints, enjoying themselves as they did so. 
+        </div>
+        <div class='col-lg-5 text-center'>
+          <figure class="figure my-4 ">
+            <img style='width:100%' src="images/paint me/test1.png " alt="... ">
+            <figcaption class="figure-caption my-3 ">Photo from our wizard-of-oz test</figcaption>
+          </figure>
+        </div>
+
+    </div>
+
+    <div class='row my-4'>
+      <div class='col-lg-5'>
+        <figure class="figure ">
+          <img style='width:100%' src="images/paint me/test 2.png " alt="... ">
+          <figcaption class="figure-caption my-3 text-center ">Photo from our digital painting activity</figcaption>
+        </figure>
+      </div>
+      <div class='col-lg-7'>
+        <h2 class='mb-3'>
+          Digital Painting
+        </h2>
+        <P>
+          The second study aimed to observe the interaction styles of users who were unfamiliar with digital painting interface.
+        </P>
+        <p>
+          We digitally prototyped the task of finger painting a statue using a propped-up iPad and the
+          software Procreate. Our participant was instructed to begin painting in a free-form manner, and was not given a specific task to complete. 
+        </p>
+        <p>
+          The process was subject to trial and error: at one point, the participant
+          attempted to create a purple colour by laying a red stroke over a blue one, but expressed that the result was not what
+          they originally pictured. At this point, the facilitator made the smudge tool available, allowing the participant to blend
+          colours effectively after undoing their previous stroke.
+        </p>
+      </div>
+      <h2 class='my-4'>
+        Core Findings
+      </h2>
+        <ul>
+          <li>
+            Participants in the first study were keen to initially instigate a trade, with this action sparking more conversations, including the consultation of one another on how to
+            paint the statue. Though conducted with a small and non-representative sample, this provided some evidence of the inherently interpersonal nature of the task.
+          </li>
+          <li>
+            Participants across both studies cited being able to take a photo of and share their work on social media as a key motivation for completing the tasks.
+          </li>
+          <li>
+            Participants across both studies engaged in exploratory learning, and adopted a trial-and-error approach to using the interfaces. This suggested that timely feedback and recoverability were important, and that users should be encouraged to explore the interface rather than being overloaded with detailed instructions.
+          </li>
+        </ul>
+    </div>
+    <div class='my-4'>
+      <h1 class='my-4'>High-fidelity Video Prototype</h1>
+      <figure class="figure ">
+        <img style='width:100%' src="images/paint me/visual abstract.png " alt="... ">
+        
+      </figure>
+      <p>
+        We explored any identified usability issues further using a cognitive walkthrough, and finalised the gesture language with which users would control the interface. We also designed a minimal onboarding procedure, which consisted of
+        timely visual prompts which appeared in the user's field of view and instructed them on how to proceed. These prompts were linked to eyegaze fixations detected by the HoloLens eye-tracking system.
+      </p>
+      <p>
+        Having finalised the featureset of our design, we conducted a high-fidelity video prototype using Adobe After Effects and the HoloLens 2 point-of-view camera tool. Our prototype visualised the full range of interactions and gestures available to the user, and illustrated the their journey through the exhibit. The prototype was
+        designed at a level of fidelity sufficient for future evaluations, and focused on giving a narrative account of the experience.
+      </p>
+
+      <div class='row my-5'>
+        <div class='col-lg-4'>
+          <figure class="figure ">
+            <img style='width:100%; height:268px; object-fit: cover;' src="images/paint me/prompts.PNG " alt="... ">
+            <figcaption class="figure-caption mt-3 ">Timely eye-gaze based prompts</figcaption>
+            
+          </figure>
+        </div>
+        <div class='col-lg-4'>
+          <figure class="figure ">
+            <img style='width:100%; height:268px; object-fit: cover;' src="images/paint me/painting.jpg " alt="... ">
+            <figcaption class="figure-caption mt-3 ">Painting interface</figcaption>
+          </figure>
+        </div>
+        <div class='col-lg-4'>
+          <figure class="figure ">
+            <img  style='width:100%; object-fit: cover; height:268px;' src="images/paint me/camera.jpg " alt="... ">
+            <figcaption class="figure-caption mt-3 ">System sharing features</figcaption>
+          </figure>
+
+        </div>
+      </div>
+      </div>
+      <div>
+        <h1 class='mb-4'>Outcome</h1>
+        <p>
+          We presented our video prototype to a purposive sample of participants in a final round of user testing, to gain high-level feedback on our concepts.  Participants responded favourably to the intervention overall, with one stating that it was “fun and impressive.” Some said they would use the activity to
+          meet new people in the museum, but most participants preferred the idea of painting with their friends. 
+        </p>
+        <p>
+          Our visual cues made it clear that colour sharing was possible and most participants understood the process, but others expressed confusion as to why colour sharing would be necessary. In future, we would make the limited number of initial colours clearer to participants. Some users struggled to predict the effect of performing the colour share gesture though we theorise that the video prototype’s fidelity may have contributed to this. In the real activity, users would immediately see the new colour appear on their 
+          palette with accompanying audio feedback. 
+        </p>
+        <p>
+          Overall, the intervention has demonstrable value as a fun and joyful activity for co-located visitors. Next steps would include prototyping the proof-of-concept for the HoloLens SDK, and evaluating it in context.
+        </p>
+
+    </div>
+</div>
+
+
+    
+
+
+
+  </section>
+  
+
+
+</main>
+
+<!-- <footer class="text-muted py-5 ">
+  <div class="container ">
+    <p class="float-end mb-1 ">
+      <a href="# ">Back to top</a>
+    </p>
+    <p class="mb-1 ">Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
+    <p class="mb-0 ">New to Bootstrap? <a href="/ ">Visit the homepage</a> or read our <a href="../getting-started/introduction/ ">getting started guide</a>.</p>
+  </div>
+</footer> -->
+
+
+<script src="../assets/dist/js/bootstrap.bundle.min.js "></script>
+
+
+  </body>
+</html>

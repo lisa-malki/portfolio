@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=    <meta name=" description " content=" ">
+    <meta name="author " content="Mark Otto, Jacob Thornton, and Bootstrap contributors ">
+    <meta name="generator " content="Hugo 0.101.0 ">
+    <title>Paint Me</title>
+
+    <link rel="canonical " href="https://getbootstrap.com/docs/5.2/examples/album/ ">
+
+    <link rel="preconnect " href="https://fonts.googleapis.com ">
+    <link rel="preconnect " href="https://fonts.gstatic.com " crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap " rel="stylesheet "> 
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;600&display=swap " rel="stylesheet ">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap " rel="stylesheet "> 
+
+    
+
+<link href="assets/dist/css/bootstrap.min.css " rel="stylesheet ">
+
+    <style>
+    .jumbotron {
+        background-image: url("images/paint me/cover.jpg ");
+        background-size: cover;
+    }
+
+    .card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+    } 
+    
+    .link-card:hover{
+        opacity:0.7
+    }
+    h1, h2, h3, h4{
+      font-family: 'Alegreya';
+    }
+    h1{
+        font-weight: 600;
+    }
+    p, li, a{
+      font-family: 'Montserrat';
+    }
+    ul li { padding: 5px 0px; }
+    ol li { padding: 5px 0px; }
+    </style>
+
+
+    
+  </head>
+  <body>
+    
+<header>
+    <nav class="navbar navbar-dark navbar-expand-lg bg-dark ">
+        <div class="container ">
+
+          <div>
+            <ul class="navbar-nav justify-content-end ">
+              <li class="nav-item px-2 ">
+                <a class="nav-link active " aria-current="page " href="index.html ">Home</a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </nav>
+</header>
+
+<main>
+    
+  <section>
+    <div class="jumbotron jumbotron-fluid py-5 ">
+        <div class="container my-3 ">
+          <h1 style='color:white; font-size: 4em;'>Redesigning a Church Website</h1>
+          <p class="lead " style='color:white'>A short UX case study focusing on redesigning the website of a local landmark church to bolster its online presence following lockdown</p>
+        </div>
+    </div>
+    <div class='container my-5'>
+      <h1 class='my-4' >Project Overview</h1>
+      <p>
+        With the onset of lockdown, many faith communities are turning to the internet to maintain contact and hold services. I redesigned the desktop website of a local landmark church
+        with a particular focus on information architecture and presentation. The site attracts a steady number of new visitors, so as well as catering
+        to the community, it also needs a clear and informative homepage which emphasises key information.
+      </p>
+
+      <p>
+        This redesign has been conducted on a voluntary basis over the past few months. I am currently in the process of updating the live St. Mary's website to reflect the design changes, which can be found <a href='https://www.stmarysharrow.org.uk/'>here.</a> The next stage of the process would be to gather feedback on
+        the UI styling once the UX improvements are actioned.
+      </p>
+      
+
+    </div>
+    <div class='container my-4'>
+      <h1 class='my-4'>User Research</h1>
+      <h3 class='my-4'>Interviews and Observations </h2>
+        <p>
+            To ensure the design was grounded in the needs of users and sensitive to their
+            existing habits, I formulated three core research questions which would guide
+            the process:
+            <ol>
+                <li>
+                    What do users generally access the website for? What are their goals?
+                </li>
+                <li>
+                    How easily are users able to complete their goals?
+                </li>
+                <li>
+                    What challenges and pain points do users experience?
+                </li>
+            </ol>
+        </p>
+
+        <p>
+            To shed some light on these questions, I conducted a remote observation with
+            three regular users of the website, and one user who had never used the site,
+            but had used other church websites. Users were encouraged to think-aloud as
+            they browsed. Design themes were constructed through affinity diagramming,
+            and a user journey map was created to visualise the flow through the website
+            relative to the users’ goals, emphasising any reported challenges.
+        </p>
+        <p>
+            It was clear from the analysis that the key usability problems were related to the site's information architecture. More specifically:
+            <ul>
+                <li>
+                    Regular users primarily use the website to find
+                    information about upcoming events.
+                </li>
+                <li>
+                    New users instinctively seek out contact details,
+                    but struggle to find them.
+                </li>
+                <li>
+                    Users miss important information if it is obscured
+                    behind unrelated links or dense text.
+                </li>
+                <li>
+                    Users are more likely to access information that is
+                    visible on the homepage or top level navbar.
+                </li>
+            </ul>
+        </p>
+        <figure class="figure ">
+            <img  style='width:100%' src="images/stmarys/user journey.PNG " alt="... ">
+            <figcaption class="figure-caption ">Journey of a fictional user through the website</figcaption>
+          </figure>
+        
+          <h1 class='my-4'> Sketching Alternatives </h1>
+          <p>
+            I then analysed a number of existing church websites to understand what users would
+            expect when browsing the site. I inspected five websites, and made notes on the
+            homepage, services, and events page, before identifying patterns which worked well
+            across sites. This served as useful inspiration for design alternatives for the homepage and services page, which were rapidly sketched.
+          </p>
+          <h2 class='my-4'>
+              Homepage Macrostructures
+          </h2>
+          <p>
+            I developed three core concepts for an improved homepage, focusing on the high-level page architecture. I experimented with vertical and horizontal navigational menus,
+            and different spatial layouts for page elements.
+          </p>
+          <p>
+            The key design aim was to make the site contact details more visually prominent, and offer an appropriate preview of the church's services and events while reducing visual clutter.
+          </p>
+          <div class='row my-4'>
+            <div class='col-lg-4'>
+              <figure class="figure ">
+                <img  style='width:75%' src="images/stmarys/low-fi wireframes/home1.PNG " alt="... ">
+                <figcaption style='width:75%' class="figure-caption my-3 "> Homepage A: vertical navigation menu,
+                  contact details immediately
+                  under the introductory carousel element</figcaption>
+              </figure>
+            </div>
+            <div class='col-lg-4'>
+              <figure class="figure ">
+                <img  style='width:75%' src="images/stmarys/low-fi wireframes/home2.PNG " alt="... ">
+                <figcaption style='width:75%' class="figure-caption my-3 "> Homepage B: contact details in the
+                  footer to make them
+                  accessible sitewide</figcaption>
+              </figure>
+            </div>
+            <div class='col-lg-4'>
+              <figure class="figure ">
+                <img  style='width:75%' src="images/stmarys/low-fi wireframes/home3.PNG " alt="... ">
+                <figcaption style='width:75%' class="figure-caption my-3 ">Homepage C: top carousel layout with
+                  featured content clearly
+                  organised in a grid below.</figcaption>
+              </figure>
+            </div>
+          </div>
+          <h2 class='my-4'>
+            Homepage Events Preview
+          </h2>
+          <p>
+            I also sketched some design alternatives for previewing church events on the homepage, experimenting with different UI patterns to convey information.
+          </p>
+          <div class='row my-4'>
+            <div class='col-lg-4'>
+              <figure class="figure ">
+                <img  style='width:100%' src="images/stmarys/low-fi wireframes/events1.PNG " alt="... ">
+                <figcaption class="figure-caption my-3 ">Downsized carousel, placing visual emphasis on the selected day and hiding others</figcaption>
+              </figure>
+            </div>
+            <div class='col-lg-4'>
+              <figure class="figure ">
+                <img  style='width:100%' src="images/stmarys/low-fi wireframes/events2.PNG " alt="... ">
+                <figcaption class="figure-caption my-3 ">Tab menu providing better visibility of all
+                  options, easy switching between
+                  days.</figcaption>
+              </figure>
+            </div>
+            <div class='col-lg-4'>
+              <figure class="figure ">
+                <img  style='width:100%' src="images/stmarys/low-fi wireframes/events3.PNG " alt="... ">
+                <figcaption class="figure-caption my-3 ">Scrolling view providing emphasis
+                  is on the most recent
+                  upcoming content</figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <h2 class='my-4'>
+            Service Page Redesign
+          </h2>
+          <p>
+            Having sketched design alternatives for the homepage, I wireframed a new services page. I converged on two alternatives with varying calendar layouts and methods for presenting service livestreams-a new addition to the site.
+          </p>
+          <div class='row my-4'>
+            <div class='col-lg-4'>
+              <figure class="figure ">
+                <img  style='width:75%' src="images/stmarys/low-fi wireframes/services2.PNG " alt="... ">
+                <figcaption style='width:75%' class="figure-caption my-3 ">Services A: column layout for the calendar and service overview. Videos are presented in a searchable grid at the bottom of the viewport.</figcaption>
+              </figure>
+            </div>
+            <div class='col-lg-4'>
+              <figure class="figure ">
+                <img  style='width:75%' src="images/stmarys/low-fi wireframes/services1.PNG " alt="... ">
+                <figcaption style='width:75%' class="figure-caption my-3 ">Services B: horizontally aligned calendar and service overview, with videos laid out in a carousel</figcaption>
+              </figure>
+            </div>
+            <div class='col-lg-4'>
+              <figure class="figure ">
+                <img  style='width:75%' src="images/stmarys/low-fi wireframes/darkened services.png " alt="... ">
+                <figcaption style='width:75%' class="figure-caption my-3 ">When a thumbnail is clicked, the video appears as a modal overlay</figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <h1 class='my-4'>
+            Medium-Fidelity Prototyping
+          </h1>
+          <h2 class='my-4'>
+            Home and Services Page
+          </h2>
+          <p>
+            I selected the strongest concepts to wireframe in medium-fidelity using Adobe
+            XD. Designs which prompted visibility of information and flexibility were
+            prioritised, allowing me to narrow the design space to two homepage alternatives,
+            a services page, and a sermons page. 
+          </p>
+          <p>
+            I then conducted remote usability tests to compare the two designs. Users were sent a link to the interactive prototype, and observed over zoom as
+            they navigated the site. Each participant was invited to browse both versions (A then
+            B) before completing a brief post-task interview. I inferred usability insights from their
+            observed actions, their stated points of frustration, and overall impressions. 
+          </p>
+          <p>
+            Key observations included:
+            <ul>
+              <li>
+                Users rarely scrolled to the footer before navigating away from the homepage,
+                suggesting that putting contact details in the footer might not be valuable.
+              </li>
+              <li>
+                When watching videos on YouTube, users remarked that they liked to peripherally browse content on
+                the page around and underneath the video player– making a modal unsuitable for sermon livestreams.
+              </li>
+              <li>
+                Homepage A was perceived to be easier to use, less cluttered,
+                and more informative than B across participants.
+              </li>
+            </ul>
+          </p>
+          <p>
+            Generally, users preferred homepage A over B, and were better able to navigate to key 
+            pages such as services and contact on the former. It was also decided that embedding videos in a separate page rather than appearing as a modal overlay would better support peripheral browsing.
+          </p>
+
+          <div class='row my-4'>
+            <div class='col-lg-4'>
+              <figure class="figure ">
+                <img  style='width:100%' src="images/stmarys/medfis/Homepage 1 – 1.png " alt="... ">
+                <figcaption  class="figure-caption my-3 ">Homepage </figcaption>
+              </figure>
+            </div>
+            <div class='col-lg-4'>
+              <figure class="figure ">
+                <img  style='width:100%' src="images/stmarys/medfis/Services 1.png " alt="... ">
+                <figcaption style='width:100%' class="figure-caption my-3 ">Services </figcaption>
+              </figure>
+            </div>
+            <div class='col-lg-4'>
+              <figure class="figure ">
+                <img  style='width:100%' src="images/stmarys/medfis/sermons.PNG " alt="... ">
+                <figcaption style='width:100%' class="figure-caption my-3 ">Page containing livestreamed sermons </figcaption>
+              </figure>
+            </div>
+          </div>
+          <h2 class='my-4'>
+            Church Blog
+          </h2>
+          <p>
+            In addition to the home and services page, I also developed a medium-fidelity wireframe for the chuch blog page, and am in the process of evaluating the whole site with users.
+          </p>
+          <div class='row my-5'>
+            <div class='col-lg-6'>
+              <figure class="figure ">
+                <img  style='width:100%' src="images/stmarys/medfis/Main blog page – 1.png " alt="... ">
+                <figcaption style='width:100%' class="figure-caption my-3 ">Main blog page </figcaption>
+              </figure>
+            </div>
+            <div class='col-lg-6'>
+              <figure class="figure ">
+                <img  style='width:100%' src="images/stmarys/medfis/Blog Detail.png " alt="... ">
+                <figcaption style='width:75%' class="figure-caption my-3 ">Blog post </figcaption>
+              </figure>
+            </div>
+          </div>
+          <h1 class='mb-4'>
+            Outcomes
+          </h1>
+          <p>
+            The redesign has improved the information architecture, usability, and aesthetic appeal of the site. Content is visible and organised in a way that
+            is logical, and intuitive to find. I grounded my
+            design criteria in the needs of users, and
+            conducted research into existing church
+            websites to develop a UI vocabulary which
+            was familiar to users. 
+          </p>
+          <p>
+            I am currently implementing the new features and designs on the live site, and will soon focus my attention on the mobile UI. This will involve a dedicated sketching and prototyping
+            session, as the X can be affected significantly by the size of the viewport.
+
+          </p>
+
+
+    </div>
+
+
+
+
+
+
+
+</div>
+
+
+    
+
+
+
+  </section>
+  
+
+
+</main>
+
+<!-- <footer class="text-muted py-5 ">
+  <div class="container ">
+    <p class="float-end mb-1 ">
+      <a href="# ">Back to top</a>
+    </p>
+    <p class="mb-1 ">Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
+    <p class="mb-0 ">New to Bootstrap? <a href="/ ">Visit the homepage</a> or read our <a href="../getting-started/introduction/ ">getting started guide</a>.</p>
+  </div>
+</footer> -->
+
+
+<script src="../assets/dist/js/bootstrap.bundle.min.js "></script>
+
+
+  </body>
+</html>
